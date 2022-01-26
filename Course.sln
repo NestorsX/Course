@@ -11,12 +11,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CoordinatesFormatter", "Coo
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AltMath", "AltMath\AltMath.csproj", "{E17FBF0B-73E4-449E-B17E-19F91434398C}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "GreatestCommonDivisor", "GreatestCommonDivisor", "{40C71075-4C1E-4C7C-8F54-AB809440C3D9}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GreatestCommonDivisor", "GreatestCommonDivisor\GreatestCommonDivisor\GreatestCommonDivisor.csproj", "{E87B4ACC-D20C-4EBB-BDCF-E67C0819B1B6}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GreatestCommonDivisor.Tests", "GreatestCommonDivisor\GreatestCommonDivisor.Tests\GreatestCommonDivisor.Tests.csproj", "{04013188-9281-4751-92D5-D9D0D9C5A0CC}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -31,14 +25,6 @@ Global
 		{E17FBF0B-73E4-449E-B17E-19F91434398C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E17FBF0B-73E4-449E-B17E-19F91434398C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E17FBF0B-73E4-449E-B17E-19F91434398C}.Release|Any CPU.Build.0 = Release|Any CPU
-		{E87B4ACC-D20C-4EBB-BDCF-E67C0819B1B6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{E87B4ACC-D20C-4EBB-BDCF-E67C0819B1B6}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{E87B4ACC-D20C-4EBB-BDCF-E67C0819B1B6}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{E87B4ACC-D20C-4EBB-BDCF-E67C0819B1B6}.Release|Any CPU.Build.0 = Release|Any CPU
-		{04013188-9281-4751-92D5-D9D0D9C5A0CC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{04013188-9281-4751-92D5-D9D0D9C5A0CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{04013188-9281-4751-92D5-D9D0D9C5A0CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{04013188-9281-4751-92D5-D9D0D9C5A0CC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -46,8 +32,6 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{DC9ECDA5-40B0-4B50-AA16-BD7B08C5AC20} = {F9EEDF89-20A7-4700-A181-2ED415566798}
 		{E17FBF0B-73E4-449E-B17E-19F91434398C} = {02D9E290-FBA6-42C2-BC8D-84FA43CDC6E2}
-		{E87B4ACC-D20C-4EBB-BDCF-E67C0819B1B6} = {40C71075-4C1E-4C7C-8F54-AB809440C3D9}
-		{04013188-9281-4751-92D5-D9D0D9C5A0CC} = {40C71075-4C1E-4C7C-8F54-AB809440C3D9}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {B5193302-3921-4BFA-B286-9E05A7BF283F}
