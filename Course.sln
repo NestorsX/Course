@@ -1,0 +1,39 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.32112.339
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "AltMath", "AltMath", "{02D9E290-FBA6-42C2-BC8D-84FA43CDC6E2}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CoordinatesFormatter", "CoordinatesFormatter", "{F9EEDF89-20A7-4700-A181-2ED415566798}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CoordinatesFormatter", "CoordinatesFormatter\CoordinatesFormatter.csproj", "{DC9ECDA5-40B0-4B50-AA16-BD7B08C5AC20}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AltMath", "AltMath\AltMath.csproj", "{E17FBF0B-73E4-449E-B17E-19F91434398C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DC9ECDA5-40B0-4B50-AA16-BD7B08C5AC20}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DC9ECDA5-40B0-4B50-AA16-BD7B08C5AC20}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DC9ECDA5-40B0-4B50-AA16-BD7B08C5AC20}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DC9ECDA5-40B0-4B50-AA16-BD7B08C5AC20}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E17FBF0B-73E4-449E-B17E-19F91434398C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E17FBF0B-73E4-449E-B17E-19F91434398C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E17FBF0B-73E4-449E-B17E-19F91434398C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E17FBF0B-73E4-449E-B17E-19F91434398C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{DC9ECDA5-40B0-4B50-AA16-BD7B08C5AC20} = {F9EEDF89-20A7-4700-A181-2ED415566798}
+		{E17FBF0B-73E4-449E-B17E-19F91434398C} = {02D9E290-FBA6-42C2-BC8D-84FA43CDC6E2}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B5193302-3921-4BFA-B286-9E05A7BF283F}
+	EndGlobalSection
+EndGlobal
