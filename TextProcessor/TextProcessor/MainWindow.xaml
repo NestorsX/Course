@@ -1,0 +1,19 @@
+﻿<Window x:Class="TextProcessor.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TextProcessor"
+        mc:Ignorable="d"
+        x:Name="window"
+        Title="Alternative notepad" Height="450" Width="800">
+    <DockPanel>
+        <ToolBar DockPanel.Dock="Top">
+            <Button Content="New" Click="BtnNewFile_Click"/>
+            <Button Content="Open" Click="BtnOpenFile_Click"/>
+            <Button Content="Save" Click="BtnSaveFile_Click"/>
+            <Button Content="Save as..." Click="BtnSaveFileAs_Click"/>
+        </ToolBar>
+        <TextBox x:Name="workplace" AcceptsTab="True" AcceptsReturn="True" FontSize="16" FontFamily="Consolas" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto"/>
+    </DockPanel>
+</Window>
