@@ -34,7 +34,7 @@ namespace BinaryTree
 
         public override string ToString()
         {
-            return string.Format("Студент: {0}\nТест: {1}\nДата: {2}\nРезультат: {3}", _studentName, _testName, _testDate.ToString("dd/mm/yyyy"), _testScore);
+            return string.Format("Студент: {0}\nТест: {1}\nДата: {2}\nРезультат: {3}", _studentName, _testName, _testDate.ToString("dd/MM/yyyy"), _testScore);
         }
     }
 }
