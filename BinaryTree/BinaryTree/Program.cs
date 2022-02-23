@@ -11,7 +11,12 @@ namespace BinaryTree
             var tree = new BinaryTreeNode<StudentTestResult>(someUser, null);
             for (int i = 1; i <= 10; i++)
             {
-                tree.Add(new StudentTestResult($"Student {i}", $"Test {i}", DateTime.Now, score.Next(10)));
+                var current = new StudentTestResult($"Student {i}", $"Test {i}", DateTime.Now, score.Next(10));
+                tree.Add(current);
+                /*if (i == 2)
+                {
+                    someUser = current;
+                }*/
             }
 
             tree.Print();

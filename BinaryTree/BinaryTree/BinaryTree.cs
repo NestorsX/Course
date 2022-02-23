@@ -15,7 +15,7 @@ namespace BinaryTree
 
 		public void Add(T value)
 		{
-			if (value.CompareTo(_value) < 0)
+			if (value.CompareTo(_value) <= 0)
 			{
 				switch(_left)
                 {
@@ -62,6 +62,32 @@ namespace BinaryTree
             };
         }
 
+		private void ChangeChildOfParentNode(BinaryTreeNode<T> node, BinaryTreeNode<T> nodeToChange)
+        {
+			if (node._parent == null)
+            {
+				return;
+            }
+
+			if (node == node._parent._left)
+			{
+				node._parent._left = nodeToChange;
+				return;
+			}
+
+			node._parent._right = nodeToChange;
+		}
+		
+		private BinaryTreeNode<T> GetLeftmostNode(BinaryTreeNode<T> currentNode)
+        {
+			if (currentNode._left != null)
+			{ 
+				return GetLeftmostNode(currentNode._left);
+			}
+
+			return currentNode;
+		}
+
 		public bool Remove(T value)
         {
 			return Remove(Search(value));
@@ -75,121 +101,31 @@ namespace BinaryTree
 			}
 
 			BinaryTreeNode<T> currentNode;
-			if (node == this)
-			{
-				if (node._right != null)
-				{
-					currentNode = node._right;
-				}
-				else
-				{
-					currentNode = node._left;
-				}
-
-				while (currentNode._left != null)
-				{
-					currentNode = currentNode._left;
-				}
-				T temp = currentNode._value;
-				Remove(currentNode);
-				node._value = temp;
-
-				return true;
-			}
-
 			if (node._left == null && node._right == null)
             {
-				if (node == node._parent._left)
-                {
-					node._parent._left = null;
-                }
-				else
-                {
-					node._parent._right = null;
-                }
-
+				ChangeChildOfParentNode(node, null);
 				return true;
             }
 
 			if (node._left == null && node._right != null)
             {
-				if (node == node._parent._left)
-				{
-					node._parent._left = node._right;
-				}
-				else
-				{
-					node._parent._right = node._right;
-				}
-
+				ChangeChildOfParentNode(node, node._right);
 				node._right._parent = node._parent;
-
 				return true;
 			}
 
 			if (node._left != null && node._right == null)
 			{
-				if (node == node._parent._left)
-				{
-					node._parent._left = node._left;
-				}
-				else
-				{
-					node._parent._right = node._left;
-				}
-
+				ChangeChildOfParentNode(node, node._left);
 				node._left._parent = node._parent;
-
 				return true;
 			}
 
 			if (node._right != null && node._left != null)
 			{
-				currentNode = node._right;
-
-				while (currentNode._left != null)
-				{
-					currentNode = currentNode._left;
-				}
-
-				if (currentNode._parent == node)
-				{
-					currentNode._left = node._left;
-					node._left._parent = currentNode;
-					currentNode._parent = node._parent;
-					if (node == node._parent._left)
-					{
-						node._parent._left = currentNode;
-					}
-					else
-					{
-						node._parent._right = currentNode;
-					}
-
-					return true;
-				}
-
-				if (currentNode._right != null)
-				{
-					currentNode._right._parent = currentNode._parent;
-				}
-
-				currentNode._parent._left = currentNode._right;
-				currentNode._right = node._right;
-				currentNode._left = node._left;
-				node._left._parent = currentNode;
-				node._right._parent = currentNode;
-				currentNode._parent = node._parent;
-				if (node == node._parent._left)
-				{
-					node._parent._left = currentNode;
-				}
-				else
-				{
-					node._parent._right = currentNode;
-				}
-
-				return true;
+				currentNode = GetLeftmostNode(node._right);
+				node._value = currentNode._value;
+				return Remove(currentNode);
 			}
 
 			return false;
